@@ -5,10 +5,10 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 @Service
-public interface PruebasStorageService {
+public interface FirebaseStorageService {
      public String cargaImagen(MultipartFile archivoLocalCliente, String carpeta, Long id);
     //El BuketName es el <id_del_proyecto> + ".appspot.com"
-    final String BucketName = "xxidProjectxx";
+    final String BucketName = "techshop-cb553.appspot.com";
 
     //Esta es la ruta básica de este proyecto Techshop
     final String rutaSuperiorStorage = "techshop";
@@ -17,5 +17,5 @@ public interface PruebasStorageService {
     final String rutaJsonFile = "firebase";
     
     //El nombre del archivo Json
-    final String archivoJsonFile = "xxxNombre del archivo Json";
+    final String archivoJsonFile = "techshop-cb553-firebase-adminsdk-ko22m-4c3143a4a6";
 }
