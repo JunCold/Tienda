@@ -41,6 +41,7 @@ public class CategoriaController {
     public String categoriaNuevo(Categoria categoria) {
         return "/categoria/modifica";
     }
+  
 
     @Autowired
     private FirebaseStorageServiceImpl firebaseStorageService;
