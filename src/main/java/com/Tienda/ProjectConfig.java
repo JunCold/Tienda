@@ -1,3 +1,4 @@
+
 package com.Tienda;
 
 import java.util.Locale;
@@ -59,7 +60,7 @@ public void addInterceptors(InterceptorRegistry registry){
                 .requestMatchers(
                         "/producto/nuevo","/producto/guardar",
                         "/producto/modificar/**","/producto/eliminar/**",
-                        "/categoria/nuevo","/categoria/guardar",
+                        "/categoria/nuevo","/categoria/guardar","/producto/listado",
                         "/categoria/modificar/**","/categoria/eliminar/**",
                         "/usuario/nuevo","/usuario/guardar",
                         "/usuario/modificar/**","/usuario/eliminar/**",
@@ -100,4 +101,5 @@ public void addInterceptors(InterceptorRegistry registry){
                 .build();
         return new InMemoryUserDetailsManager(user, sales, admin);
     }
+
 }
