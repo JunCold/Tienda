@@ -1,6 +1,7 @@
 
 package com.Tienda.controller;
 
+import com.Tienda.service.ProductoService;
 import java.util.List;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,19 +21,14 @@ import org.springframework.web.multipart.MultipartFile;
 
 @Controller
 public class indexController {
-    
+    @Autowired
+    ProductoService productoService;
     @RequestMapping("/")
     public String page(Model model) {
-      /*
-        Object principal= SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        UserDetails user=null;
-        if(principal instanceof UserDetails){
-            user=(UserDetails)principal;
-        }
-        if(user!=null){
-            
-        }
-*/
+  
+      var listaProductos= productoService.getProductos(true);
+      model.addAttribute("productos", listaProductos);
+      
         return "index";
     }
     
